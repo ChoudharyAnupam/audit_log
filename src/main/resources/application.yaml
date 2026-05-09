@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: audit_log
+  cloud:
+    aws:
+      region:
+        static: eu-north-1
+      credentials:
+        access-key: ${AWS_ACCESS_KEY}
+        secret-key: ${AWS_SECRET_KEY}
+      sqs:
+        template:
+          endpoint-names-strategy: mapping
+        enabled: true
